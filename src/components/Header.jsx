@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const Header = (props) => { //Puedo usar tambien {titulo, anio}
     const universidad = 'UNaHur';
 
     let mensaje;
 
-    if (universidad == 'UNaHur') {
+    if (universidad === 'UNaHur') {
         mensaje = 'Bienvenido'
     } 
     else {
@@ -13,12 +13,9 @@ const Header = (props) => { //Puedo usar tambien {titulo, anio}
     }
     
     return (
-        <div>
-            <h1>{props.titulo} - {props.anio}</h1>
-            <h1>Este es el header</h1>
-            <p>Yo estudio en la {universidad}</p> 
-            <p>{mensaje}</p>
-        </div>
+        <Fragment>
+            <h1>{props.titulo}</h1>
+        </Fragment>
     );
 }
 
