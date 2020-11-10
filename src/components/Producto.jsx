@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 const Producto = ({producto, carrito, agregarProducto, productos}) => {
 
@@ -13,7 +13,7 @@ const Producto = ({producto, carrito, agregarProducto, productos}) => {
         console.log(producto);
 
 
-        // Acá estoy entrando en el objeto para que lo muestre
+        // Acá estoy entrando en el objeto para que lo muestre.
         // Recordamos que lo creé como array, por eso el corchete
         console.log(producto[0]);
 
@@ -28,7 +28,7 @@ const Producto = ({producto, carrito, agregarProducto, productos}) => {
 
     // Eliminar producto del carro
     const borrarProducto = id => {
-        const producto = productos.filter(producto => producto.id != id);
+        const productos = carrito.filter(producto => producto.id !== id);
 
         // Quito el producto, como ya es un array no necesito hacer lo que 
         // hice para agregar

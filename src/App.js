@@ -14,7 +14,7 @@ function App() {
     {id:4, articulo:"Kit regalo W & N", precio:12000},
   ]);
 
-  const [carrito, agregarProducto] = useState();
+  const [carrito, agregarProducto] = useState([]);
 
   return (
     <Fragment>
@@ -27,6 +27,7 @@ function App() {
         <Producto 
           key = {Producto.id}
           producto = {producto}
+          productos = {productos}
           carrito = {carrito}
           agregarProducto = {agregarProducto}
         />
